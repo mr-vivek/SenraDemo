@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="homeDataListAdapterViewModel"
+            type="com.vivek.demo.home.viewmodel.HomeDataListAdapterViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/adapterView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_hight"
+            app:imageUrl="@{homeDataListAdapterViewModel.logoImage}"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/no_image_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/newsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="19dp"
+            android:textStyle="bold"
+            android:text="@={homeDataListAdapterViewModel.title()}"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newsImage" />
+
+
+        <View
+            app:layout_constraintTop_toBottomOf="@+id/newsTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary"
+            android:layout_width="50dp"
+            android:layout_height="2dp"/>
+
+        <TextView
+            android:id="@+id/newsDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="45dp"
+            android:text="@={homeDataListAdapterViewModel.detail()}"
+            android:textColor="@color/txtblack"
+            android:textSize="@dimen/descp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newsTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

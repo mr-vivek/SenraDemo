@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="shimmer_hight">45dp</dimen>
+    <dimen name="title">22dp</dimen>
+    <dimen name="descp">18dp</dimen>
+    <dimen name="img_hight">202dp</dimen>
+</resources>
