@@ -14,6 +14,8 @@ Unit Testing
 Good to have:
 Own image caching mechanism
 Use material design
-Instrumentation Testing
+Instrumentation Testing : Not included
+
+
 How to share this project:
 Upload the project to your github profile and share the link.
