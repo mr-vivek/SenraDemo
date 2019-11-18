@@ -2,7 +2,10 @@ Android Interview Project
 
 Create a news app, with multiple screen. One with news list and other with news details
 (webview).
+
 Refer this doc to fetch top headlines: (https://newsapi.org/docs/endpoints/top-headlines)
+
+
 Things to look before implementing is :
 Use caching, should work offline.
 Use dependency injection(Dagger), RxJava.
